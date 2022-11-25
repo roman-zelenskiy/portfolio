@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>РЗ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/style_animBack.css">
+
+</head>
+
+<body>
+    <main class="wrap">
+        <div class="animate_back">
+            <div class="rain front-row"></div>
+            <div class="rain back-row"></div>
+            <div class="toggles"></div>
+        </div>
+        <div class="black_wrap"></div>
+        <nav class="col-12 navbar navbar-expand-lg d-flex justify-content-center my_navbar">
+            <div class="container-lg row justify-content-end justify-content-lg-end my_navbar_container">
+                <button class="flex-column align-self-center burger_icon" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="burger_icon_elem"></span>
+                    <span class="burger_icon_elem"></span>
+                    <span class="burger_icon_elem"></span>
+                </button>
+                <div class="col-12 col-lg-3 align-self-lg-start offset-lg-3 my_info">
+                </div>
+                <div class="col-12 navbar-collapse my_collapse justify-content-lg-between p-lg-0">
+                    <ul class="col-lg-10 navbar-nav flex-lg-wrap justify-content-lg-start">
+                        <li class="col-7 col-sm-4 col-md-3 col-lg-auto p-0 nav-item">
+                            <a class="nav-link" href="#about">Про мене</a>
+                        </li>
+                        <li class="col-7 col-sm-4 col-md-3 col-lg-auto p-0 nav-item">
+                            <a class="nav-link" href="#portfolio_me">Портфоліо</a>
+                        </li>
+                        <li class="col-7 col-sm-4 col-md-3 col-lg-auto p-0 nav-item">
+                            <a class="nav-link" href="#contacts_me">Контакти</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-end flex-column flex-lg-row burg_lang">
+                        <a class="col-1 col-lg nav-link" href="#">UA</a>
+                        <a class="col-1 col-lg nav-link" href="#">ENG</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container p-lg-0 container_main">
+            <h1 class="my_name">Зеленський Роман</h1>
+            <div class="my_info">
+                <h4>Frontend розробник</h4>
+                <button class="but_contact_me" data-toggle="modal" data-target="#exampleModal"
+                    data-whatever="@mdo">Напишіть мені
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <section id="about" class="container-fluid about_me">
+        <div class="container d-flex flex-column p-lg-0 container_aboutme">
+            <h2>Про мене</h2>
+            <div class="row justify-content-center justify-content-md-between">
+                <div class="col-md-6 content_about">
+                    <h5>Привіт, я - Frontend розробник "початківець", мені 22 роки. </h5>
+                    <h5>Освіта:</h5>
+                    <p>Національний технічний університет "Харківський політехнічний інститут", факультет
+                        "Комп'ютерні науки" 2017-2021р.</p>
+                    <h5>Курси:</h5>
+                    <p>"Frontend-basic" в "Ukrainian IT School"</p>
+                    <p>Зараз навчаюсь в "Hillel IT School" на курсі "Frontend-Pro Advanced Level"</p>
+                    <h5>Мови:</h5>
+                    <ul class="language">
+                        <li>Українська</li>
+                        <li>Російська</li>
+                        <li>Англійська - A1</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 row justify-content-between align-content-stretch technology_about">
+                    <h5 class="col-12">Працюю з такими технологіями:</h5>
+                    <p class="col html">HTML</p>
+                    <p class="col  css">Css</p>
+                    <p class="col js">JavaScript</p>
+                    <div class="w-100"></div>
+                    <p class="col bootstrap">Bootstrap</p>
+                    <p class="col git">Git</p>
+                    <p class="col github">Github</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio_me" class="portfolio">
+        <div class="container p-lg-0 container_portfolio">
+            <h2>Портфоліо</h2>
+            <ul class="row flex-column justify-content-center jus my_works">
+                <li class="col col-lg-5 p-md-0">
+                    <p class="number_item">01</p><a href="./assets/project/online_zoo/index.html"><span
+                            class="wrap_to_psevdoelem">
+                            <p class="about_item">HTML, CSS адаптивная верстка, з JS функціоналом</p> <img
+                                src="./assets/img/online_zoo.png">
+                        </span></a>
+                </li>
+                <li class="col col-lg-5 p-md-0 mt-4 mt-md-5 align-self-end">
+                    <p class="number_item">02</p><a href="./assets/project/Leader_NRG_Ukraine/index.html"><span
+                            class="wrap_to_psevdoelem">
+                            <p class="about_item">HTML, CSS, BOOTSTRAP 4 адаптивная верстка, з jQuery функціоналом</p>
+                            <img src="./assets/img/leader_energy.png">
+                        </span></a>
+                </li>
+                <li class="col col-lg-5 p-md-0 mt-4 mt-md-5">
+                    <p class="number_item">03</p><a href="./assets/project/layout/index.html"><span
+                            class="wrap_to_psevdoelem">
+                            <p class="about_item">HTML, CSS адаптивная верстка, з JS функціоналом</p><img
+                                src="./assets/img/bakery_bo.png">
+                        </span></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="contacts_me" class="contacts">
+        <div class="container p-lg-0 container_contact">
+            <h2>Контакти</h2>
+            <p>Хочете дізнатись більше?</p>
+            <form id="form_popup" class="form_footer" name="form">
+                <div class="row m-0 flex-column flex-lg-row">
+                    <div class="form-group col-lg-6 pl-0">
+                        <label for="recipient-name" class="col-form-label"></label>
+                        <input name="name" type="text" placeholder="Ваше ім'я"
+                            class="form-control input_messege_popup input_name" id="recipient-name">
+                        <label for="recipient-name" class="col-form-label"></label>
+                        <input name="email" type="email" placeholder="Електронна пошта"
+                            class="form-control input_messege_popup input_email" id="recipient-name">
+                    </div>
+                    <div class="form-group col-lg-6 p-0 message_form_popup">
+                        <label for="message-text" class="col-form-label"></label>
+                        <textarea name="mess" class="form-control input_messege_popup input_message"
+                            placeholder="Ведіть ваше повідомлення" id="message-text"></textarea>
+                        <p class="message_to_user"></p>
+                    </div>
+                    <div class="modal-footer col-12 p-lg-0 justify-content-center">
+                        <button type="submit" class="send_btn but_contact_me">Відправити
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="row justify-content-around social_networks">
+                <li class="telegram"><a href="https://t.me/roma_zelenskyi"></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/roma_zelenskiy"></a></li>
+                <li class="github"><a href="https://github.com/roman-zelenskiy"></a></li>
+                <li class="gmail"><a href="mailto:romazelenskiy2000@gmail.com"></a></li>
+                <li class="linkedin"><a href="#"></a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="modal fade form_popup_headwrap" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog popup_wrap" role="document">
+            <div class="modal-content body_popup">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Нове повідомлення</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_popup" name="form">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label"></label>
+                            <input name="name" type="text" placeholder="Ваше ім'я"
+                                class="form-control input_messege_popup input_name" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label"></label>
+                            <input name="email" type="email" placeholder="Електронна пошта"
+                                class="form-control input_messege_popup input_email" id="recipient-name">
+                        </div>
+                        <div class="form-group message_form_popup">
+                            <label for="message-text" class="col-form-label"></label>
+                            <textarea name="mess" class="form-control input_messege_popup input_message"
+                                placeholder="Ведіть ваше повідомлення" id="message-text"></textarea>
+                            <p class="message_to_user"></p>
+                        </div>
+                        <div class="modal-footer p-0">
+                            <button type="button" class=" popup_closebtnsubmitbtn close_popup_btn"
+                                data-dismiss="modal">Закрити</button>
+                            <button type="submit" class="popup_closebtnsubmitbtn send_btn">Відправити</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="button_top">
+        <span></span>
+        <span></span>
+    </button>
+    <div class="social_networks_fixed justify-content-center d-flex d-lg-block">
+        <ul class="row flex-lg-column align-items-center social_networks">
+            <li class="mr-5 mr-lg-0 mb-lg-3 telegram"><a href="https://t.me/roma_zelenskyi"></a></li>
+            <li class="mr-5 mr-lg-0 mb-lg-3 instagram"><a href="https://www.instagram.com/roma_zelenskiy"></a></li>
+            <li class="mr-5 mr-lg-0 mb-lg-3 github"><a href="https://github.com/roman-zelenskiy"></a></li>
+            <li class="mb-lg-3 gmail"><a href="mailto:romazelenskiy2000@gmail.com"></a></li>
+            <li class="linkedin"><a href="#"></a></li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./assets/script/javascript.js"></script>
+    <script src="./assets/script/script_animateBack.js"></script>
+</body>
+
+</html>
