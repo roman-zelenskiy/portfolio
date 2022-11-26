@@ -242,6 +242,7 @@ h4 {
 
 .but_contact_me:hover span:first-child {
   width: 10px;
+  right: -20px;
   background: #ffffff;
 }
 
@@ -470,11 +471,11 @@ h4 {
   top: -110%;
   left: 20px;
   width: 200px;
-  transition: all 1s ease 0.3s;
-  -webkit-transition: all 1s ease 0.3s;
-  -moz-transition: all 1s ease 0.3s;
-  -ms-transition: all 1s ease 0.3s;
-  -o-transition: all 1s ease 0.3s;
+  transition: all 0.6s ease;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
   color: #ffffff;
   font-size: 20px;
 }
@@ -1013,13 +1014,13 @@ h4 {
   .my_works .number_item {
     display: block;
   }
-  .my_works li:hover .wrap_to_psevdoelem::after {
+  /* .my_works li:hover .wrap_to_psevdoelem::after {
     transform: rotate(45deg) translateY(750px);
     -webkit-transform: rotate(45deg) translateY(750px);
     -moz-transform: rotate(45deg) translateY(750px);
     -ms-transform: rotate(45deg) translateY(750px);
     -o-transform: rotate(45deg) translateY(750px);
-  }
+  } */
 
   .my_works li:hover .wrap_to_psevdoelem::before {
     display: inline-block;

@@ -133,7 +133,7 @@
         } 
         if (!inputName.value) {
             inputName.style.outlineColor = 'rgb(255 00 0)';
-            messageToUeserName.innerHTML = "Введіть ім'я";
+            messageToUeserName.innerHTML = "Введіть ваше ім'я";
             return false;
         }
     }
