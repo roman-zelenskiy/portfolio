@@ -60,7 +60,9 @@
     const CHAT_ID = "-1001324585348";
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let textareaPopup = document.getElementsByClassName('message_form_popup')[0];
+    let formFooter = document.getElementsByClassName('form_footer')[0]; 
     let formPopup = document.getElementById('form_popup');
+    formFooter.addEventListener('submit', onSendForm);
     formPopup.addEventListener('submit', onSendForm);
     let messageToUeser = document.getElementsByClassName('message_to_user')[0];
     let btnContactMe = document.querySelector('.but_contact_me');

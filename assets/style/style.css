@@ -798,20 +798,14 @@ h4 {
   margin-bottom: 10px;
   margin-top: 0;
 }
-.form_footer .input_message {
-  height: 160px;
-  display: inline-block;
-  margin-top: 20px;
+.formbox_contact .inputname_contact{
+  height: 70px;
 }
-.form_footer .input_email {
-  display: inline-block;
-  margin-top: 20px;
+.formbox_contact .inputemail_contact{
+  height: 70px;
 }
-.form_footer .col-form-label {
-  display: inline;
-}
-.form_footer .modal-footer {
-  border-top: none;
+.formbox_contact .inputmess_contact{
+  height: 200px;
 }
 @media screen and (min-width: 768px) {
   .container_main {
@@ -1013,13 +1007,7 @@ h4 {
   .my_works .number_item {
     display: block;
   }
-  /* .my_works li:hover .wrap_to_psevdoelem::after {
-    transform: rotate(45deg) translateY(750px);
-    -webkit-transform: rotate(45deg) translateY(750px);
-    -moz-transform: rotate(45deg) translateY(750px);
-    -ms-transform: rotate(45deg) translateY(750px);
-    -o-transform: rotate(45deg) translateY(750px);
-  } */
+
 
   .my_works li:hover .wrap_to_psevdoelem::before {
     display: inline-block;
@@ -1027,16 +1015,10 @@ h4 {
   .my_works li + li {
     margin-top: -100px !important;
   }
-  .form_footer .input_name {
-    height: 70px;
+    .formbox_contact .inputmess_contact {
+      height: auto;
+    }
   }
-  .form_footer .input_email {
-    height: 70px;
-  }
-  .form_footer .input_message {
-    margin-top: 0px;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .wrap {

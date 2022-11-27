@@ -27,8 +27,7 @@
         <div class="black_wrap"></div>
         <nav class="col-12 navbar navbar-expand-lg d-flex justify-content-center my_navbar">
             <div class="container-lg row justify-content-end justify-content-lg-end my_navbar_container">
-                <button class="flex-column align-self-center burger_icon" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                <button class="flex-column align-self-center burger_icon" type="button"
                     aria-label="Toggle navigation">
                     <span class="burger_icon_elem"></span>
                     <span class="burger_icon_elem"></span>
@@ -106,49 +105,48 @@
                 <li class="col col-lg-5 p-md-0">
                     <p class="number_item">01</p><a href="./assets/project/online_zoo/index.html"><span
                             class="wrap_to_psevdoelem">
-                            <p class="about_item">HTML, CSS адаптивна верстка, з JS функціоналом</p> <img
-                                src="./assets/img/online_zoo.png">
+                            <span class="about_item">HTML, CSS адаптивна верстка, з JS функціоналом</span> <img
+                                src="./assets/img/online_zoo.png" alt="online_zoo">
                         </span></a>
                 </li>
                 <li class="col col-lg-5 p-md-0 mt-4 mt-md-5 align-self-end">
                     <p class="number_item">02</p><a href="./assets/project/Leader_NRG_Ukraine/index.html"><span
                             class="wrap_to_psevdoelem">
-                            <p class="about_item">HTML, CSS, BOOTSTRAP 4 адаптивна верстка, з jQuery функціоналом</p>
-                            <img src="./assets/img/leader_energy.png">
+                            <span class="about_item">HTML, CSS, BOOTSTRAP 4 адаптивна верстка, з jQuery функціоналом</span>
+                            <img src="./assets/img/leader_energy.png" alt="leader_energy">
                         </span></a>
                 </li>
                 <li class="col col-lg-5 p-md-0 mt-4 mt-md-5">
                     <p class="number_item">03</p><a href="./assets/project/layout/index.html"><span
                             class="wrap_to_psevdoelem">
-                            <p class="about_item">HTML, CSS адаптивна верстка, з JS функціоналом</p><img
-                                src="./assets/img/bakery_bo.png">
+                            <span class="about_item">HTML, CSS адаптивна верстка, з JS функціоналом</span><img
+                                src="./assets/img/bakery_bo.png" alt="bakery_bo">
                         </span></a>
                 </li>
             </ul>
         </div>
     </section>
     <section id="contacts_me" class="contacts">
-        <div class="container p-lg-0 container_contact">
+        <div class="container p-md-0 container_contact">
             <h2>Контакти</h2>
             <p>Хочете дізнатись більше?</p>
-            <form id="form_popup" class="form_footer" name="form">
-                <div class="row m-0 flex-column flex-lg-row">
-                    <div class="form-group col-lg-6 p-0 pr-lg-3">
-                        <label for="recipient-name" class="col-form-label"></label>
+            <form class="form_footer" name="form_contact">
+                <div class="row no-gutters flex-column flex-lg-row formbox_contact">
+                    <div class="col-lg-6 pr-lg-3 d-flex flex-column">
+                        <label for="contact_name" class="d-inline-block m-0"></label>
                         <input name="name" type="text" placeholder="Ваше ім'я"
-                            class="form-control input_messege_popup input_name" id="recipient-name">
-                        <label for="recipient-name" class="col-form-label"></label>
+                            class="w-100 pl-1 inputname_contact" id="contact_name">
+                        <label for="email_contact" class="d-inline-block m-0"></label>
                         <input name="email" type="email" placeholder="Електронна пошта"
-                            class="form-control input_messege_popup input_email" id="recipient-name">
+                            class="w-100 d-inline-block mt-3 pl-1 inputemail_contact" id="email_contact">
                     </div>
-                    <div class="form-group col-lg-6 p-0 message_form_popup">
-                        <label for="message-text" class="col-form-label"></label>
-                        <textarea name="mess" class="form-control input_messege_popup input_message"
-                            placeholder="Введіть ваше повідомлення" id="message-text"></textarea>
-                        <p class="message_to_user"></p>
+                    <div class="col-lg-6 d-flex mt-3 mt-lg-0">
+                        <label for="message_text_contact" class="col-form-label"></label>
+                        <textarea name="mess" class="w-100 pl-1 inputmess_contact"
+                            placeholder="Введіть ваше повідомлення" id="message_text_contact"></textarea>
                     </div>
-                    <div class="modal-footer col-12 p-lg-0 justify-content-center">
-                        <button type="submit" class="send_btn but_contact_me">Відправити
+                    <div class="col-12 mt-4 mt-lg-5 justify-content-center">
+                        <button type="submit" class="but_contact_me">Відправити
                             <span></span>
                             <span></span>
                         </button>
@@ -182,9 +180,9 @@
                                 class="form-control input_messege_popup input_name" id="recipient-name">
                         </div>
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label"></label>
+                            <label for="recipient-email" class="col-form-label"></label>
                             <input name="email" type="email" placeholder="Електронна пошта"
-                                class="form-control input_messege_popup input_email" id="recipient-name">
+                                class="form-control input_messege_popup input_email" id="recipient-email">
                         </div>
                         <div class="form-group message_form_popup">
                             <label for="message-text" class="col-form-label"></label>
