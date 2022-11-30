@@ -1,3 +1,5 @@
+let ukrBtn = document.getElementsByClassName('ukr')[0];
+let engBtn = document.getElementsByClassName('eng')[0];
 (function burgerIcon() {
     let butIcon = document.querySelector('.burger_icon');
     let butIconSpan = document.querySelectorAll('.burger_icon_elem');
@@ -31,7 +33,7 @@
     butIcon.addEventListener('click', clickBurg);
     blackWrap.addEventListener('click', clickBlackWrap);
 })();
-(function butScrollTop() { 
+(function butScrollTop() {
     let butScroll = document.getElementsByClassName('button_top')[0];
     let socialNetworksFixed = document.getElementsByClassName('social_networks_fixed')[0];
     let social_networks = document.querySelector('.container_contact .social_networks');
@@ -60,7 +62,7 @@
     const CHAT_ID = "-1001324585348";
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
     let textareaPopup = document.getElementsByClassName('message_form_popup')[0];
-    let formFooter = document.getElementsByClassName('form_footer')[0]; 
+    let formFooter = document.getElementsByClassName('form_footer')[0];
     let formPopup = document.getElementById('form_popup');
     formFooter.addEventListener('submit', onSendForm);
     formPopup.addEventListener('submit', onSendForm);
@@ -82,11 +84,22 @@
                 this.name.value = '';
                 this.email.value = '';
                 this.mess.value = '';
-                messageToUeser.innerHTML = 'Дані успішно відправлені!';
+                messageToUeser.innerHTML = 'Data sent successfully!';
+                if (ukrBtn.className.includes('active') === true) {
+                    messageToUeser.innerHTML = 'Дані успішно відправлені!';
+                }
+                if (engBtn.className.includes('active') === true) {
+                    messageToUeser.innerHTML = 'Data sent successfully!';
+                }
                 textareaPopup.after(messageToUeser);
             })
             .catch(() => {
-                messageToUeser.innerHTML = 'Помилка';
+                if (ukrBtn.className.includes('active') === true) {
+                    messageToUeser.innerHTML = 'Помилка!';
+                }
+                if (engBtn.className.includes('active') === true) {
+                    messageToUeser.innerHTML = 'Error!';
+                }
                 textareaPopup.after(messageToUeser);
             });
     }
@@ -130,12 +143,22 @@
     }
     function onValidationNameBlur() {
         if (regExpValidName.test(inputName.value) === true) {
-            messageToUeserName.innerHTML = "Ім'я не може містити цифри"; 
+            if (ukrBtn.className.includes('active') === true) {
+                messageToUeserName.innerHTML = "Ім'я не може містити цифри";
+            }
+            if (engBtn.className.includes('active') === true) {
+                messageToUeserName.innerHTML = "The name cannot contain numbers";
+            }
             return false;
-        } 
+        }
         if (!inputName.value) {
             inputName.style.outlineColor = 'rgb(255 00 0)';
-            messageToUeserName.innerHTML = "Введіть ваше ім'я";
+            if (ukrBtn.className.includes('active') === true) {
+                messageToUeserName.innerHTML = "Введіть ваше ім'я";
+            }
+            if (engBtn.className.includes('active') === true) {
+                messageToUeserName.innerHTML = "Enter your name";
+            }
             return false;
         }
     }
@@ -160,14 +183,24 @@
     function onValidationEmailBlur() {
         if (regExpValidEmail.test(inputEmail.value) === false) {
             inputEmail.style.outlineColor = 'rgb(255 00 0)';
-            messageToUeserEmail.innerHTML = "Невірно вказана електронна пошта";
+            if (ukrBtn.className.includes('active') === true) {
+                messageToUeserEmail.innerHTML = "Непрвильно вказана електронна пошта";
+            }
+            if (engBtn.className.includes('active') === true) {
+                messageToUeserEmail.innerHTML = "Incorrect e-mail address";
+            }
             return false;
         }
     }
     function onValidationMessageBlur() {
         if (!inputMesssage.value) {
             inputMesssage.style.outlineColor = 'rgb(255 00 0)';
-            messageToUeserMess.innerHTML = "Введіть ваше повідомлення";
+            if (ukrBtn.className.includes('active') === true) {
+                messageToUeserMess.innerHTML = "Введіть ваше повідомлення";
+            }
+            if (engBtn.className.includes('active') === true) {
+                messageToUeserMess.innerHTML = "Enter your message";
+            }
         }
     }
     function onValidationMessageFocus() {
@@ -177,7 +210,12 @@
     function onValidationMessage() {
         if (!inputMesssage.value) {
             inputMesssage.style.outlineColor = 'rgb(255 00 0)';
-            messageToUeserMess.innerHTML = "Введіть ваше повідомлення";
+            if (ukrBtn.className.includes('active') === true) {
+                messageToUeserMess.innerHTML = "Введіть ваше повідомлення";
+            }
+            if (engBtn.className.includes('active') === true) {
+                messageToUeserMess.innerHTML = "Enter your message";
+            }
             return false;
         } else {
             return true;
@@ -202,4 +240,120 @@
     inputName.addEventListener('keyup', onDisabled);
     inputEmail.addEventListener('keyup', onDisabled);
     inputMesssage.addEventListener('keyup', onDisabled);
+})();
+
+(function multLang() {
+    let sendBtn = document.getElementsByClassName('send_btn');
+    let langBtn = document.querySelectorAll('.burg_lang a');
+    for (btn of langBtn) {
+        btn.addEventListener('click', onclickLangBtn);
+    };
+    function onclickLangBtn(e) {
+        e.target.classList.add('active');
+        e.target.nextElementSibling !== null ? e.target.nextElementSibling.classList.remove('active') : true;
+        e.target.previousElementSibling !== null ? e.target.previousElementSibling.classList.remove('active') : true;
+        for (elem of document.all) {
+            if (e.target === ukrBtn) {
+                eng.forEach((elEng, ind) => {
+                    if (elem.innerHTML === elEng) {
+                        ua.forEach((elemUa, index, arr) => {
+                            elem.innerHTML = arr[ind];
+                        });
+                    };
+                    if (elem.placeholder === elEng) {
+                        ua.forEach((elemUa, index, arr) => {
+                            elem.placeholder = arr[ind];
+                        });
+                    };
+                });
+            } else {
+                ua.forEach((elEng, ind) => {
+                    if (elem.innerHTML === elEng) {
+                        eng.forEach((elemUa, index, arr) => {
+                            elem.innerHTML = arr[ind];
+                        });
+                    };
+                    if (elem.placeholder === elEng) {
+                        eng.forEach((elemUa, index, arr) => {
+                            elem.placeholder = arr[ind];
+                        });
+                    };
+                });
+            }
+        }
+    }
+    let eng = [
+        'About me',
+        'Portfolio',
+        'Contacts',
+        'UA',
+        'ENG',
+        'Roman Zelenskyi',
+        'Frontend developer',
+        'Сontact me',
+        'About me',
+        'Hi, I\'m a "beginner" frontend developer, I\'m 22 years old.',
+        'Education:',
+        'National Technical University "Kharkiv Polytechnic Institute", Faculty of "Computer Sciences" 2017-2021.',
+        'Courses:',
+        '"Frontend-basic" at "Ukrainian IT School"',
+        'I am currently studying at "Hillel IT School" on the "Frontend-Pro Advanced Level" course',
+        'Languages:',
+        'Ukrainian',
+        'Russian',
+        'English - A1',
+        'I work with the following technologies:',
+        'Portfolio',
+        '01',
+        'HTML, CSS responsive layout, with JS functionality',
+        '02',
+        'HTML, CSS, BOOTSTRAP 4 responsive layout, with jQuery functionality',
+        '03',
+        'HTML, CSS responsive layout, with JS functionality',
+        'Contacts',
+        'Want to learn more?',
+        'Send',
+        'Your name',
+        'Email',
+        'Enter your message',
+        'close',
+        'New message'
+    ];
+    let ua = [
+        'Про мене',
+        'Портфоліо',
+        'Контакти',
+        'Укр',
+        'Англ',
+        'Зеленський Роман',
+        'Frontend розробник',
+        'напишіть мені',
+        'Про мене',
+        'Привіт, Я a frontend розробник "початківець", мені 22 роки',
+        'Освіта:',
+        'Національний технічний університет "Харківський політехнічний iнститут", Факультет "Комп\'ютерні науки" 2017-2021р.',
+        'Курси:',
+        '"Frontend-basic" в "Ukrainian IT School"',
+        'Зараз навчаюсь в "Hillel IT School" на курсі "Frontend-Pro Advanced Level"',
+        'Мови:',
+        'Українська',
+        'Російська',
+        'Англійська - A1',
+        'Працюю з такими технологіями:',
+        'Портфоліо',
+        '01',
+        'HTML, CSS адаптивна верстка, з JS функціоналом',
+        '02',
+        'HTML, CSS, BOOTSTRAP 4 адаптивна верстка, з jQuery функціоналом',
+        '03',
+        'HTML, CSS адаптивна верстка, з JS функціоналом',
+        'Контакти',
+        'Хочете дізнатися більше?',
+        'Відправити',
+        'Ваше ім\'я',
+        'Електронна пошта',
+        'Введіть ваше повідомлення',
+        'закрити',
+        'нове повідомлення'
+    ];
 })();
