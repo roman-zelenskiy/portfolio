@@ -588,7 +588,10 @@ background: #2d89ef;
   .menu_collapse .main:hover a {
     color: #2d89ef;
   }
-
+.container_preview_product h2{
+  width: 50%;
+  margin-top: -30px;
+}
   .menu_collapse .product:hover a {
     color: #603cba;
   }
@@ -660,7 +663,7 @@ background: #2d89ef;
   }
   .preview_product {
     position: relative;
-    margin-top: -30px;
+    margin-top: 0px;
     z-index: 10;
   }
   .btns_description .descrp_prod:hover,
